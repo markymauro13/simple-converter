@@ -18,19 +18,21 @@ public class convert {
 		
 		System.out.println("Value: ");
 		
-		 if(scanner.nextInt() == 0) 
+		int input = scanner.nextInt();
+		
+		 if(input == 0) 
 		 {
 			System.out.println("Enter amount of miles:");
 			System.out.println("The amount of feet is: " + mileToFt(0));
 			System.out.println("|---------------------------|");
 		 }
-		 else if(scanner.nextInt() == 1)
+		 else if(input == 1)
 		 {
 			System.out.println("Convert yard to feet: ");
 			System.out.println("The amount of feet is: " + yrdToFt(0) );
 			System.out.println("|---------------------------|");
 		 }
-		 else if (scanner.nextInt() == 2) 
+		 else if (input == 2) 
 		 {
 			System.out.println("Convert feet to inches: ");
 			System.out.println("The amount of feet is: "+ cmToIn(0) );
