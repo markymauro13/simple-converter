@@ -13,31 +13,38 @@ public class convert {
 		System.out.println("What do you want to convert?");
 		System.out.println("Available conversions:");
 		System.out.println("- Type 0 for miles to feet -");
-		System.out.println("- Type 1 twice for centimeters to inches -");
-		System.out.println("- Type 2 thrice for feet to inches -");
+		System.out.println("- Type 1 for centimeters to inches -");
+		System.out.println("- Type 2 for feet to inches -");
 		
 		System.out.println("Value: ");
-		
 		int input = scanner.nextInt();
 		
-		 if(input == 0) 
+		 
+		 while (input == 0) 	// just changed this to a while loop, was an if statement before
 		 {
 			System.out.println("Enter amount of miles:");
 			System.out.println("The amount of feet is: " + mileToFt(0));
 			System.out.println("|---------------------------|");
 		 }
-		 else if(input == 1)
+		 while(input == 1)	// just changed this to a while loop, was an if statement before
 		 {
+			System.out.println();
 			System.out.println("Convert yard to feet: ");
 			System.out.println("The amount of feet is: " + yrdToFt(0) );
+			System.out.println();
 			System.out.println("|---------------------------|");
 		 }
-		 else if (input == 2) 
+		 while(input == 2) // just changed this to a while loop, was an if statement before
 		 {
 			System.out.println("Convert feet to inches: ");
 			System.out.println("The amount of feet is: "+ cmToIn(0) );
 			System.out.println("|---------------------------|");
 		 }
+		
+		 System.out.println();
+		 System.out.println("Do you want to convert again?");
+		 
+		 
 	}
 
 	
