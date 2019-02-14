@@ -10,47 +10,66 @@ public class convert {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		// put a for loop here (int i = 0; i < 10; i++)
+		// put a for loop here 
 		
-		System.out.println("What do you want to convert?");
-		System.out.println("Available conversions:");
-		System.out.println("- Type 0 for miles to feet -");
-		System.out.println("- Type 1 for centimeters to inches -");
-		System.out.println("- Type 2 for feet to inches -");
+		for (int i = 0; i < 10; i++)	// run through the conversions 10 times - 0,1,2,3,4,5,6,7,8,9 = 10
+		{
+			
 		
-		System.out.println("Value: ");
-		int input = scanner.nextInt();
+			System.out.println("What do you want to convert?");
+			System.out.println("Available conversions:");
+			System.out.println("- Type 0 for miles to feet -");
+			System.out.println("- Type 1 for yard to feet -");
+			System.out.println("- Type 2 for feet to inches -");
+			System.out.println("- Type 3 for centimeters to inches");
 		
+			System.out.println("Value: ");
+		
+			int input = scanner.nextInt();
+		
+		
+				if (input > 3 || input < 0) {
+				
+					System.out.println("Invalid value, try again.");
+				}
+				else if (input == 0) { 				 
+				
+					System.out.println("Enter amount of miles:");
+					System.out.println("The amount of feet is: " + mileToFt(0));
+					System.out.println();
+					System.out.println("|---------------------------|");
+				}
+				else if (input == 1) {			 
+				
+					System.out.println();
+					System.out.println("Convert yard to feet: ");
+					System.out.println("The amount of feet is: " + yrdToFt(0) );
+					System.out.println();
+					System.out.println("|---------------------------|");
+				}
+				else if (input == 2) { 		 
+				
+					System.out.println("Convert feet to inches: ");
+					System.out.println("The amount of inches is: "+ ftToIn(0) );
+					System.out.println("|---------------------------|");
+				}
+		
+				else if (input == 3) {	
+				
+					System.out.println("Convert centimeters to inches: ");
+					System.out.println("The amount of inches is: " + cmToIn(0));
+					System.out.println("|---------------------------|");
+
+				}
 		 
-		 while (input == 0) 	// just changed this to a while loop, was an if statement before
-		 {
-			System.out.println("Enter amount of miles:");
-			System.out.println("The amount of feet is: " + mileToFt(0));
-			System.out.println("|---------------------------|");
-		 }
-		 while(input == 1)	// just changed this to a while loop, was an if statement before
-		 {
-			System.out.println();
-			System.out.println("Convert yard to feet: ");
-			System.out.println("The amount of feet is: " + yrdToFt(0) );
-			System.out.println();
-			System.out.println("|---------------------------|");
-		 }
-		 while(input == 2) // just changed this to a while loop, was an if statement before
-		 {
-			System.out.println("Convert feet to inches: ");
-			System.out.println("The amount of feet is: "+ cmToIn(0) );
-			System.out.println("|---------------------------|");
-		 }
-		
 		 System.out.println();
-		 System.out.println("Do you want to convert again?");
-		 
+		
+		}
 		 
 	}
 
 	
-	public static int cmToIn(int inches) // method for return centimeters from inches
+	public static int ftToIn(int inches) // method for return centimeters from inches
 	{
 		Scanner s1 = new Scanner(System.in);
 		
@@ -76,5 +95,16 @@ public class convert {
 		feet = (mile * 5280);
 		return feet;
 	}
+	
+	public static double cmToIn(double inches)
+	{
+		Scanner s4 = new Scanner(System.in);
+		
+		double centimeter = s4.nextInt();
+		inches = (centimeter / 2.54);
+		
+		return inches;
+	}
+	
 	
 }
