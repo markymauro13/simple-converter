@@ -10,6 +10,8 @@ public class convert {
 		
 		Scanner scanner = new Scanner(System.in);
 		
+		// put a for loop here (int i = 0; i < 10; i++)
+		
 		System.out.println("What do you want to convert?");
 		System.out.println("Available conversions:");
 		System.out.println("- Type 0 for miles to feet -");
