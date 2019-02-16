@@ -21,14 +21,15 @@ public class convert {
 			System.out.println("- Type 0 for miles to feet -");
 			System.out.println("- Type 1 for yard to feet -");
 			System.out.println("- Type 2 for feet to inches -");
-			System.out.println("- Type 3 for centimeters to inches");
+			System.out.println("- Type 3 for centimeters to inches -");
+			System.out.println("- Type 4 for pounds to ounces -");
 		
 			System.out.println("Value: ");
 		
 			int input = scanner.nextInt();
 		
 		
-				if (input > 3 || input < 0) {
+				if (input > 4 || input < 0) {
 				
 					System.out.println("Invalid value, try again.");
 				}
@@ -60,6 +61,11 @@ public class convert {
 					System.out.println("The amount of inches is: " + cmToIn(0));
 					System.out.println("|---------------------------|");
 
+				}
+				else if (input == 4) {
+					
+					System.out.println("Convert pounds to ounces: ");
+					System.out.println("The amount of ounces is " + pdToOz(0));
 				}
 		 
 		 System.out.println();
@@ -96,15 +102,26 @@ public class convert {
 		return feet;
 	}
 	
+	
+	public static int pdToOz(int oz)	// 1 pound = 16 ounces
+	{
+		Scanner s4 = new Scanner(System.in);	
+		int pound = s4.nextInt();
+		oz = (pound * 16);
+		return oz;
+	}
+	
 	public static double cmToIn(double inches)
 	{
-		Scanner s4 = new Scanner(System.in);
+		Scanner s5 = new Scanner(System.in);
 		
-		double centimeter = s4.nextInt();
+		double centimeter = s5.nextInt();
 		inches = (centimeter / 2.54);
 		
 		return inches;
 	}
+	
+	
 	
 	
 }
